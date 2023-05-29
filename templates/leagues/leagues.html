@@ -1,0 +1,25 @@
+{% extends "shared/_layout.html" %}
+{% block main_content %}
+<div class="ui three item menu">
+    <a hx-get="/games" class="item" hx-push-url="true" hx-target="#main_content" hx-swap="outerHTML">Games</a>
+    <a class="active item">League table</a>
+    <a hx-get="/players" class="item" hx-push-url="true" hx-target="#main_content" hx-swap="outerHTML">Players</a>
+</div>
+
+<div id="tab-content" class="ui-segment">
+
+    <table class="ui celled table">
+        <thead>
+            <tr>
+                <th>Player id</th>
+                <th>Player name</th>
+                <th>Points</th>
+                </tr>                
+        </thead>
+        <tbody id="table-body">
+            {% include "leagues/partials/league_table.html" %}
+        </tbody>
+    </table>
+
+</div>
+{% endblock %}

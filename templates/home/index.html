@@ -1,0 +1,4 @@
+{% extends "shared/_layout.html" %}
+{% block main_content %}
+<div id="tabs" hx-get="/games" hx-trigger="load delay:100ms" hx-target="#main_content" hx-swap="outerHTML" hx-push-url="true"></div>
+{% endblock %}

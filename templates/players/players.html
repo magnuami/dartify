@@ -1,0 +1,36 @@
+{% extends "shared/_layout.html" %}
+{% block main_content %}
+<div class="ui three item menu">
+    <a hx-get="/games" class="item" hx-push-url="true" hx-target="#main_content" hx-swap="outerHTML">Games</a>
+    <a hx-get="/leagues" class="item" hx-push-url="true" hx-target="#main_content" hx-swap="outerHTML">League table</a>
+    <a class="active item">Players</a>
+</div>
+
+<div id="tab-content" class="ui-segment">
+
+    <form class="ui form" action="/add" method="post">
+        <div class="field">
+            <label>Player name</label>
+            <input type="text" name="name" placeholder="Enter player name..."><br>
+        </div>
+        <button class="ui blue button" type="submit"
+        hx-post="/players/add"
+        hx-target="#table-body"
+        hx-trigger="click"
+        >Add</button>
+    </form>
+
+    <table class="ui celled table">
+        <thead>
+            <tr>
+                <th>Player id</th>
+                <th>Player name</th>
+                <th>Action</th>
+            </tr>                
+        </thead>
+        <tbody id="table-body">
+            {% include "players/partials/table.html" %}
+        </tbody>
+    </table>
+</div>
+{% endblock %}

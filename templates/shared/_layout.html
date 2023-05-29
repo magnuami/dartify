@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Dartlify</title>
+
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.css">
+        <script src="https://cdn.jsdelivr.net/npm/semantic-ui@2.4.2/dist/semantic.min.js"></script>
+        
+
+<!--         <style>
+            div {
+            border-style: solid;
+            border-color: red;
+            }
+        </style> -->
+    </head>
+
+    <body>
+        <div style="margin-top: 50px;" class="ui container" id="main_content">
+            <h1 class="ui center aligned header">Dartlify</h1>
+            <hr>
+
+            {% block main_content %}{% endblock %}
+
+        </div>
+
+        <script src="https://unpkg.com/htmx.org@1.9.0"></script>
+
+    </body>
+</html>

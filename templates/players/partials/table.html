@@ -1,0 +1,12 @@
+{% for player in players %}
+<tr>
+    <td data-label="Player id">{{ player.id }}</td>
+    <td data-label="Player name">{{ player.name }}</td>
+    <td data-label="Action">
+        <button class="ui red button" 
+            hx-post="/players/delete/{{ player.id }}">
+            Delete
+        </button>
+    </td>
+</tr>  
+{% endfor %}

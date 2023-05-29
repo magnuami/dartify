@@ -1,0 +1,12 @@
+{% extends "shared/_layout.html" %}
+{% block main_content %}
+<div class="ui three item menu">
+    <a class="active item">Games</a>
+    <a class="item"hx-get="/leagues" hx-push-url="true" hx-target="#main_content" hx-swap="outerHTML">League table</a>
+    <a class="item"hx-get="/players" hx-push-url="true" hx-target="#main_content" hx-swap="outerHTML">Players</a>
+</div>
+
+<div id="tab-content" class="ui-segment">
+
+</div>
+{% endblock %}

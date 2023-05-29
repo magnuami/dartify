@@ -1,0 +1,12 @@
+{% for player in players %}
+<tr>
+    <td data-label="Player id">{{ player.id }}</td>
+    <td data-label="Player name">{{ player.name }}</td>
+    <td data-label="Action">
+        <div class="ui checked checkbox">
+            <input type="checkbox" name="example" checked="">
+            <label></label>
+        </div>
+    </td>
+</tr>  
+{% endfor %}
